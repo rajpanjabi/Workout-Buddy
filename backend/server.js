@@ -3,10 +3,17 @@ import dotenv from "dotenv";
 import workoutRoutes from "./routes/workouts.js"
 import mongoose from "mongoose";
 dotenv.config();
+import cors from "cors"
+
 const port=process.env.PORT;
 
 const app =express();
 
+app.use(cors({
+    origin:"[https://localhost:4000]",
+    methods:"[GET, POST]",
+    credentials:"true"
+}))
 
 
 app.use(express.json());
