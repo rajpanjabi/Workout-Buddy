@@ -10,7 +10,7 @@ const WorkoutDetails=({workout})=>{
 
   const handleDelete= async()=>{
 
-    const response= await axios.delete("/api/workouts/"+ `${workout._id}`)
+    const response= await axios.delete(`/api/workouts/${workout._id}`)
 
     if (response.status>=200 && response.status<=299) {
    
