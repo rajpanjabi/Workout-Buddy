@@ -12,7 +12,7 @@ const Home= ()=>{
     useEffect(()=>{
    const fetchWorkouts= async ()=>{
     try{
-        const response= await axios.get("/api/workouts");
+        const response= await axios.get("https://workout-buddy-z8t9.onrender.com/api/workouts");
         console.log(response.data)
 
         if (response.status>=200 && response.status<=299){
