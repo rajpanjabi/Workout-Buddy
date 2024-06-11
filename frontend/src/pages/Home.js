@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import axios from "axios"
 import WorkoutDetails from "../components/Workoutdetails"
 import WorkoutForm from "../components/WorkoutForm";
@@ -6,7 +6,7 @@ import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
 
 
 const Home= ()=>{
-   // const [workouts,setWorkouts]= useState([]);
+   
 
    const {workouts,dispatch}=useWorkoutsContext();
     useEffect(()=>{
